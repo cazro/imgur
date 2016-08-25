@@ -13,7 +13,13 @@
   "keywords": [
     "imgur"
   ],
-  "author": "Eric King",
+  "author": "Eric King <edk@ericdavidking.com>",
+  "contributors": [
+    {
+      "name": "Eric King",
+      "email": "edk@ericdavidking.com"
+    }
+  ],
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/cazro/imgur/issues"
