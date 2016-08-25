@@ -1,0 +1,25 @@
+{
+  "name": "imgur",
+  "version": "1.0.0",
+  "description": "Node npm module for getting Imgur data on images and albums. For use in my navapp server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cazro/imgur.git"
+  },
+  "keywords": [
+    "imgur"
+  ],
+  "author": "Eric King",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/cazro/imgur/issues"
+  },
+  "homepage": "https://github.com/cazro/imgur#readme",
+  "dependencies": {
+    "request": "^2.74.0"
+  }
+}
