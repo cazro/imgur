@@ -4,9 +4,12 @@ My attempt at creating a node module for accessing the Imgur API to get info, no
 
 ## Installing
 
+```
 npm install git+https://github.com/cazro/imgur.git
+```
 
 ## Using
+
 ```
 var imgur = require('imgur')(clientID);
 ```
