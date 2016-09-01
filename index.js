@@ -8,7 +8,7 @@ function grabURLs(data){
 	urls = [];
 	for(var d in data){
 		
-		if(!data[d].is_ad) urls.push(data[d].link);
+		if(data[d] && !data[d].is_ad) urls.push(data[d].link);
 		
 	}
 	
