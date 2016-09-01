@@ -62,7 +62,7 @@ Imgur.prototype.album = function(url,fn){
 		
 		if(data) {
 			
-			urls = grabURLs(data.images);
+			urls = grabURLs(data);
 			
 			if(fn){
 				
