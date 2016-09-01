@@ -83,7 +83,7 @@ Imgur.prototype.album = function(url,fn){
 
 // Returns array of urls to each image.
 Imgur.prototype.gallery = function(url,fn){
-	this.options.path = '/3/gallery/album/'+parseURL(url);
+	this.options.url = 'https://'+this.hostname+'/3/gallery/album/'+parseURL(url);
 	get(this.options,function(data){
 		if(data) {
 			urls = grabURLs(data);
