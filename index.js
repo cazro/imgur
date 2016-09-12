@@ -32,9 +32,9 @@ function get(options,fn){
 	request(options,function(err,res,body){
 		
 		if(err){
-			fn(err);
+			fn(false,err);
 		} else {
-			fn(JSON.parse(body).data);
+			fn(true,JSON.parse(body).data);
 		}
 	});
 
@@ -58,9 +58,9 @@ var Imgur = function(clientID){
 Imgur.prototype.album = function(url,fn){
 	this.options.url = 'https://'+this.hostname+'/3/album/'+parseURL(url)+'/images';
 	
-	get(this.options,function(data){
+	get(this.options,function(res,data){
 		
-		if(data) {
+		if(res) {
 			
 			urls = grabURLs(data);
 			
@@ -84,8 +84,8 @@ Imgur.prototype.album = function(url,fn){
 // Returns array of urls to each image.
 Imgur.prototype.gallery = function(url,fn){
 	this.options.url = 'https://'+this.hostname+'/3/gallery/album/'+parseURL(url);
-	get(this.options,function(data){
-		if(data) {
+	get(this.options,function(res,data){
+		if(res) {
 			urls = grabURLs(data.images);
 			
 			if(fn){
@@ -108,8 +108,8 @@ Imgur.prototype.gallery = function(url,fn){
 // Returns direct url to image
 Imgur.prototype.image = function(url,fn){
 	this.options.url = 'https://'+this.hostname+'/3/image/'+parseURL(url);
-	get(this.options,function(data){
-		if(data) {			
+	get(this.options,function(res,data){
+		if(res) {			
 			if(fn){
 				
 				if(!data.is_ad) fn(data.link);
